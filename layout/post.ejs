@@ -17,10 +17,15 @@
 
         <% if (!page.no_date) { %>
         <div class="date" id="date">
-            <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][page.date.month()] %></span>
-            <span><%- page.date.date() %>,</span>
-            <span><%- page.date.year() %></span>
+            <span>Posted: </span>
+            <span><%= page.date.format(config.page_date_format) %></span>
         </div>
+        <% if (page.updated && page.updated > page.date) { %>
+        <div class="date" id="date">
+            <span>Edited: </span>
+            <span><%= page.updated.format(config.page_date_format) %></span>
+        </div>
+        <% } %>
         <% } %>
 
         <h2 class="title"><%= page.title %></h2>
@@ -32,13 +37,9 @@
         <%- page.content %>
     </div>
 
-    <% if (!page.no_about) { %>
+    <% if (page.tags && page.tags.length) { %>
     <div class="about">
-        <h1><%= __('about_this_post') %></h1>
-        <div class="details">
-            <p><%- __('this_post_is_written_by', config.author) %>, <%- __('licensed_under', `<a href="${theme.license_link}">${theme.license}</a>`) %>.</p>
-        </div>
-        <% if (page.tags && page.tags.length) { %>
+        <h3><%= __('tags') %></h3>
         <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
             <%
                 var tags = ''
@@ -50,27 +51,26 @@
             <i class="icon"></i>
             <%- tags %>
         </p>
-        <% } %>
     </div>
     <% } %>
 
     <div class="container post-prev-next">
-        <% if (page.prev) { %>
-        <a href="<%= url_for(page.prev.path) %>" class="next">
-            <div>
-                <div class="text">
-                    <p class="label"><%= __('next_post') %></p>
-                    <h3 class="title"><%= page.prev.title %></h3>
-                </div>
-            </div>
-        </a>
-        <% } else { %><a class="next"></a><% } %>
         <% if (page.next) { %>
         <a href="<%= url_for(page.next.path) %>" class="prev">
             <div>
                 <div class="text">
                     <p class="label"><%= __('prev_post') %></p>
-                    <h3 class="title"><%= page.next.title %></>
+                    <h3 class="title"><%= page.next.title %></h3>
+                </div>
+            </div>
+        </a>
+        <% } else { %><a class="next"></a><% } %>
+        <% if (page.prev) { %>
+        <a href="<%= url_for(page.prev.path) %>" class="next">
+            <div>
+                <div class="text">
+                    <p class="label"><%= __('next_post') %></p>
+                    <h3 class="title"><%= page.prev.title %></>
                 </div>
             </div>
         </a>

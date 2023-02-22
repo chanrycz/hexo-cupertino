@@ -4,16 +4,16 @@
 favicon: /favicon.png
 
 # the path to manifest.json
-manifest: /manifest.json
+# manifest: /manifest.json
 
 # [Open Graph Protocol](https://ogp.me/)
 og_enabled: true
 og_image: /favicon.png
 og:
-  # customize og properties here which will replace the defaults
+    # customize og properties here which will replace the defaults
 
 # show excerpt on post list
-show_excerpt: false
+show_excerpt: true
 
 # light/dark/auto color scheme
 color_scheme: auto
@@ -25,7 +25,7 @@ show_color_scheme_toggle: true
 uppercase_categories: true
 
 # capitalize tag names on tags page
-capitalize_tags: false
+capitalize_tags: true
 
 # add hashtag prefix before tags
 hashtag_prefix_before_tags: true
@@ -33,86 +33,63 @@ hashtag_prefix_before_tags: true
 # rainbow!
 rainbow_banner: true
 rainbow_banner_colors:
-  - '#e50000'
-  - '#ff8d00'
-  - '#ffee00'
-  - '#008121'
-  - '#004cff'
-  - '#760188'
-# choose from [auto, always]
+    - "#e50000"
+    - "#ff8d00"
+    - "#ffee00"
+    - "#008121"
+    - "#004cff"
+    - "#760188"
+# choose from [auto, always, never]
 rainbow_banner_shown: auto
 # Pride Month by default
 rainbow_banner_month: 6
 
 # TOC - table of contents
 toc: true
-toc_max_depth: 2
+toc_max_depth: 3
 
 # scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter/leave the viewport
 scroll_reveal: true
 
 # navigation config
 nav:
-  # the title displays in the upper left corner which won't change
-  title: Blog
-  # the items displays in the upper right corner
-  items:
-    # these items will display as a link
-    Archives: /archives
-    Friends: /friends
-    Projects: /projects
-    About: /about
-    # these will be automatically be an icon
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Search: /search
+    # the title displays in the upper left corner which won't change
+    title: CHANRYCZ
+    # the items displays in the upper right corner
+    items:
+        # these items will display as a link
+        Categories: /categories
+        Tags: /tags
+        # these will be automatically be an icon
+        Search: /search
 
 # footer items
 footer:
-  # the title
-  Blog:
-    # the items after the title, display as links
-    Blog: /
-    Archives: /archives
-    Tags: /tags
-    Categories: /categories
-    Search: /search
-    Friends: /friends
-    Projects: /projects
-    Resume: /resume
-    About: /about
-    RSS: /atom.xml
-  # also the title
-  Projects:
-    # the items
-    RSA CLI: https://github.com/MrWillCom/rsa-cli
-    Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
-    A Calendar: https://github.com/MrWillCom/a-calendar
-    Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
-  # the title
-  Me:
-    # items
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Email: mailto:mr.will.com@outlook.com
+    # the title
+    Blog:
+        # the items after the title, display as links
+        Blog: /
+        Tags: /tags
+        Categories: /categories
+        Search: /search
+        Archive: /archive
+    Me:
+        About: /about
+        GitHub: https://github.com/chanrycz
+        Email: https://chanrycz.com/contact/
+        Site: https://chanrycz.com/
+    
 
 # footer extra description
-# footer_extra_description: something will be shown at the bottom of the footer
+footer_extra_description: '<a href="https://chanrycz.com/rrpf-englishlp" class="link-unstyled">Hello</a>'
 
 # the license your posts under
-license: CC BY-NC 4.0
+# license: CC BY-NC 4.0
 # the link of your license
-license_link: https://creativecommons.org/licenses/by-nc/4.0
+# license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
 # based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 search: true
 search_path: search.json
-
 # REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!

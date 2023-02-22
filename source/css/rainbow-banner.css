@@ -1,9 +1,20 @@
 .rainbow-banner {
-  background-image: var(--gradient);
-  height: 6px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 900;
+	background-image: var(--gradient);
+	height: 48px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 900;
+	opacity: var(--rainbow-opacity);
+}
+
+@media screen and (max-width: 600px) {
+	.rainbow-banner {
+		transition: height 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+	
+	.rainbow-banner.nav-open {
+		height: var(--nav-open-height);
+	}
 }

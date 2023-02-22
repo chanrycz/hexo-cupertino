@@ -1,102 +1,112 @@
-body[data-color-scheme="auto"], body[data-color-scheme="light"] {
-    --white-opacity-8: rgba(255, 255, 255, .8);
-    --white-1-opacity-8: rgba(229.5, 229.5, 229.5, .8);
-    --white: #fff;
-    --white-1: rgb(229.5, 229.5, 229.5);
-    --white-2: rgb(204, 204, 204);
+body {
+	--nav-open-height: 240px;
+	--hero-random-1: var(--black-2);
+	--hero-random-2: var(--black-2);
+}
 
-    --grey: rgb(127.5, 127.5, 127.5);
+body[data-color-scheme="auto"],
+body[data-color-scheme="light"] {
+	--white-opacity-8: rgba(255, 255, 255, 0.8);
+	--white-1-opacity-8: rgba(229.5, 229.5, 229.5, 0.8);
+	--white: #fff;
+	--white-1: rgb(229.5, 229.5, 229.5);
+	--white-2: rgb(204, 204, 204);
 
-    --black: #000;
-    --black-2: rgb(51, 51, 51);
-    --black-4: rgb(102, 102, 102);
+	--grey: rgb(127.5, 127.5, 127.5);
 
-    --border-color: #8882;
+	--black: #000;
+	--black-2: rgb(51, 51, 51);
+	--black-4: rgb(102, 102, 102);
 
-    --link: #06c;
+	--border-color: #8882;
 
-    --blur: blur(32px);
+	--link: #006bdd;
 
-    --blue: #0071e3;
-    --white-txt-on-blue-bg: #fff;
+	--nav-effect: saturate(180%) blur(5px);
+	--rainbow-opacity: 25%;
 
-    --nav-bg: var(--white-opacity-8);
+	--blue: #007bff;
+	--white-txt-on-blue-bg: #fff;
 
-    --footer-link-grey: #515154;
+	--nav-bg: var(--white-opacity-8);
 
-    --body-bg: #fbfbfd;
-    --card-bg: #fff;
-    --card-title: #1d1d1f;
-    --card-time: #6e6e73;
-    --date-txt: #6e6e73;
+	--footer-link-grey: #515154;
 
-    --nav-arrow: #1d1d1f;
+	--body-bg: #f9f9f9;
+	--card-bg: #fff;
+	--card-title: #1d1d1f;
+	--card-time: #6e6e73;
+	--date-txt: #6e6e73;
+
+	--nav-arrow: #1d1d1f;
 }
 
 @media (prefers-color-scheme: dark) {
-    body[data-color-scheme="auto"] {
-        --white-opacity-8: rgba(0, 0, 0, .8);
-        --white-1-opacity-8: rgba(25.5, 25.5, 25.5, .8);
-        --white: #000;
-        --white-1: rgb(25.5, 25.5, 25.5);
-        --white-2: rgb(51, 51, 51);
+	body[data-color-scheme="auto"] {
+		--white-opacity-8: rgba(0, 0, 0, 0.8);
+		--white-1-opacity-8: rgba(25.5, 25.5, 25.5, 0.8);
+		--white: #000;
+		--white-1: rgb(25.5, 25.5, 25.5);
+		--white-2: rgb(51, 51, 51);
 
-        --black: #fff;
-        --black-2: rgb(204, 204, 204);
-        --black-4: rgb(153, 153, 153);
+		--black: #fff;
+		--black-2: rgb(204, 204, 204);
+		--black-4: rgb(153, 153, 153);
 
-        --border-color: #8884;
+		--border-color: #8884;
 
-        --link: #5fafff;
+		--link: #2c92ff;
 
-        --blur: blur(32px);
+		--nav-effect: saturate(180%) blur(5px);
+		--rainbow-opacity: 15%;
 
-        --blue: #00376f;
-        --white-txt-on-blue-bg: #c0dfff;
+		--blue: #007bff;
+		--white-txt-on-blue-bg: #c0dfff;
 
-        --nav-bg: rgba(0, 0, 0, .5);
+		--nav-bg: rgba(0, 0, 0, 0.5);
 
-        --footer-link-grey: #a1a1a6;
+		--footer-link-grey: #a1a1a6;
 
-        --body-bg: #101010;
-        --card-bg: #181818;
-        --card-title: #cfcfd5;
-        --card-time: #6e6e73;
-        --date-txt: #6e6e73;
+		--body-bg: #101010;
+		--card-bg: #1e1e1e;
+		--card-title: #dddddd;
+		--card-time: #6e6e73;
+		--date-txt: #6e6e73;
 
-        --nav-arrow: #e5e5ee;
-    }
+		--nav-arrow: #e5e5ee;
+	}
 }
 
 body[data-color-scheme="dark"] {
-    --white-opacity-8: rgba(0, 0, 0, .8);
-    --white-1-opacity-8: rgba(25.5, 25.5, 25.5, .8);
-    --white: #000;
-    --white-1: rgb(25.5, 25.5, 25.5);
-    --white-2: rgb(51, 51, 51);
+	--white-opacity-8: rgba(0, 0, 0, 0.8);
+	--white-1-opacity-8: rgba(25.5, 25.5, 25.5, 0.8);
+	--white: #000;
+	--white-1: rgb(25.5, 25.5, 25.5);
+	--white-2: rgb(51, 51, 51);
 
-    --black: #fff;
-    --black-2: rgb(204, 204, 204);
-    --black-4: rgb(153, 153, 153);
+	--black: #fff;
+	--black-2: rgb(204, 204, 204);
+	--black-4: rgb(153, 153, 153);
 
-    --border-color: #8884;
+	--border-color: #8884;
 
-    --link: #5fafff;
+	--link: #2c92ff;
 
-    --blur: blur(32px);
+	--nav-effect: saturate(180%) blur(5px);
+	--rainbow-opacity: 15%;
 
-    --blue: #00376f;
-    --white-txt-on-blue-bg: #c0dfff;
+	--blue: #007bff;
+	--white-txt-on-blue-bg: #c0dfff;
 
-    --nav-bg: rgba(0, 0, 0, .5);
+	--nav-bg: rgba(0, 0, 0, 0.5);
 
-    --footer-link-grey: #a1a1a6;
+	--footer-link-grey: #a1a1a6;
 
-    --body-bg: #101010;
-    --card-bg: #181818;
-    --card-title: #cfcfd5;
-    --card-time: #6e6e73;
-    --date-txt: #6e6e73;
+	--body-bg: #101010;
+	--card-bg: #1e1e1e;
+	--card-title: #dddddd;
+	--card-time: #6e6e73;
+	--date-txt: #6e6e73;
 
-    --nav-arrow: #e5e5ee;
+	--nav-arrow: #e5e5ee;
 }
